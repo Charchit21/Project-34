@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title></title>
+         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+         <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                background-color: #f7f7f7;
+                color: #333;
+                line-height: 1.6;
+                padding: 20px;
+            }
+            h1 {
+            color: #444;
+            text-align: center;
+            margin-bottom: 50px;
+            }
+            div {
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            #case1 {
+                filter: opacity(50%);
+            }
+         </style>          
+    </head>
+    <body>
+        <div class="container">
+            <h1>Bank App</h1><br>
+            <p><h4>Enter Transaction Amount :
+            <input type="number" id="myTextInput" placeholder="Enter required Amount"><br></h4></p>
+            <button onclick="getValue()">Go Forward with Transaction</button>
+            <p id="output"></p>
+            <button type="button">Credit</button>
+            <button type="button">Debit</button>
+            <p id="case1">Your Account Balance is : Rs.0</p>
+        </div>
+        <script>
+            function getValue() {
+        
+            const textInput = document.getElementById('myTextInput');
+            const inputValue = textInput.value;
+            document.getElementById('output').textContent = "You entered: " + inputValue;
+            textInput.value = '';
+            }
+        </script>
+    </body>
+</html>
